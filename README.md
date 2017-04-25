@@ -1,15 +1,15 @@
 # LMG_DS_CVM
-Repository for CVM Data Science Product at Landmark Group
+# Repository for CVM Data Science Product at Landmark Group
 
-Project Status:
+# Project Status:
 
 In progress
 
-Project Objective:
+# Project Objective:
 
 Developing a CVM product for Analytics at Landmark Group
 
-Project Team:
+# Project Team:
 
 Sayak Dutta
 
@@ -19,11 +19,11 @@ Aman Goswami
 
 Anirban Nandi
 
-Phase I:
+# Phase I:
 
 Predicting the likelihood to buy for different concepts(Home Centre & Lifestyle) at Landmark Group
 
-Folder Details:
+# Folder Details:
 
 Lifestyle - Contains Modeling Codes for Lifestyle
 
