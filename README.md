@@ -23,7 +23,9 @@ Predicting the likelihood to buy for different concepts(Home Centre & Lifestyle)
 
 Folder Details:
 
-Vijay - Contains Vijay's (Lifestyle) Model Codes
+Lifestyle - Contains Modeling Codes for Lifestyle
 
-Sayak - Contains Sayak's (Home Centre) Model Codes
+Home Centre - Contains Modeling Codes for Home Centre
+
+
 
