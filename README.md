@@ -17,6 +17,8 @@ Vijay Bhaskar
 
 Aman Goswami
 
+Anirban Nandi
+
 Phase I:
 
 Predicting the likelihood to buy for different concepts(Home Centre & Lifestyle) at Landmark Group
