@@ -1,5 +1,5 @@
 # LMG_DS_CVM
-Repository for CVM Data Science Product at Landmark Group
+:highlight Repository for CVM Data Science Product at Landmark Group gui=bold
 
 Project Status:
 
