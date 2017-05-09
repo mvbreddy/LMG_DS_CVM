@@ -8,7 +8,7 @@
   /*Getting LMG transactions between the given dates. A formatted date variable is also added*/
   
 
-  data SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE (Compress=yes);
+  data SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE (Compress=yes);
       set sascrm.TN_ITM_REV_AE ;
 		where TXN_DT_WID >= 20160401 and TXN_DT_WID<= 20170331 and TRANSACTION_TYPE = "Purchase" and units >= 0 and revenue_aed >= 0 and Retail_cost_1_AED >= 0 and Retail_cost_2_AED>= 0 ;
 
@@ -17,7 +17,7 @@
   run;
 
 /*data crosscheck1;*/
-/*set SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE;*/
+/*set SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE;*/
 /*where TXN_DT_WID >= 20160401 and TXN_DT_WID<= 20170331 and TRANSACTION_TYPE = "Purchase" and units >= 0 and revenue_aed >= 0 and Retail_cost_1_AED >= 0 and Retail_cost_2_AED>= 0 */
 /*		and lmg_mem_card_number = "1800000006365362";*/
 /*	    date = INPUT(PUT(TXN_DT_WID,8.),YYMMDD8.); */
@@ -26,7 +26,7 @@
 /*run;*/
 /**/
 /*data crosscheck;*/
-/*set SPDTMP7.VB_Apr_CUS_TN_ITM_REV_AE_7;*/
+/*set SPDTMP7.VB_Apr17_CUS_TN_ITM_REV_AE_7;*/
 /*where LMG_MEM_CARD_NUMBER = "1800000006365362";*/
 /*run;*/
  
@@ -34,7 +34,7 @@
 /*Getting Lifestyle transactions between the given dates and creating a Visit_flag as a categorical  variable to 
   give a time component to visits. A formatted date variable is also added*/
 
-data SPDTMP7.VB_Apr_LS_TN_ITM_REV_AE_ (Compress=yes);
+data SPDTMP7.VB_Apr17_LS_TN_ITM_REV_AE_ (Compress=yes);
       set sascrm.TN_ITM_REV_AE ;
 		where TXN_DT_WID >= 20160401 and TXN_DT_WID<= 20170331 and LMG_CONCEPT_NAME = "Lifestyle" and TRANSACTION_TYPE = "Purchase" and units >= 0 and revenue_aed >= 0 and Retail_cost_1_AED >= 0 and Retail_cost_2_AED>= 0 ;
 
@@ -46,7 +46,7 @@ data SPDTMP7.VB_Apr_LS_TN_ITM_REV_AE_ (Compress=yes);
 	   format date ddmmyys10.;
   run;
  
-  data SPDTMP7.VB_Apr_SH_TN_ITM_REV_AE_ (Compress=yes);
+  data SPDTMP7.VB_Apr17_SH_TN_ITM_REV_AE_ (Compress=yes);
       set sascrm.TN_ITM_REV_AE ;
 		where TXN_DT_WID >= 20160401 and TXN_DT_WID<= 20170331 and LMG_CONCEPT_NAME = "Splash" and TRANSACTION_TYPE = "Purchase" and units >= 0 and revenue_aed >= 0 and Retail_cost_1_AED >= 0 and Retail_cost_2_AED>= 0 ;
 
@@ -59,7 +59,7 @@ data SPDTMP7.VB_Apr_LS_TN_ITM_REV_AE_ (Compress=yes);
   run;
 
 
-data SPDTMP7.VB_Apr_HC_TN_ITM_REV_AE_ (Compress=yes);
+data SPDTMP7.VB_Apr17_HC_TN_ITM_REV_AE_ (Compress=yes);
       set sascrm.TN_ITM_REV_AE ;
 		where TXN_DT_WID >= 20160401 and TXN_DT_WID<= 20170331 and LMG_CONCEPT_NAME = "Home center" and TRANSACTION_TYPE = "Purchase" and units >= 0 and revenue_aed >= 0 and Retail_cost_1_AED >= 0 and Retail_cost_2_AED>= 0 ;
 
@@ -71,7 +71,7 @@ data SPDTMP7.VB_Apr_HC_TN_ITM_REV_AE_ (Compress=yes);
 	   format date ddmmyys10.;
   run;
 
-data SPDTMP7.VB_Apr_HB_TN_ITM_REV_AE_ (Compress=yes);
+data SPDTMP7.VB_Apr17_HB_TN_ITM_REV_AE_ (Compress=yes);
       set sascrm.TN_ITM_REV_AE ;
 		where TXN_DT_WID >= 20160401 and TXN_DT_WID<= 20170331 and LMG_CONCEPT_NAME = "Home Box" and TRANSACTION_TYPE = "Purchase" and units >= 0 and revenue_aed >= 0 and Retail_cost_1_AED >= 0 and Retail_cost_2_AED>= 0 ;
 
@@ -85,7 +85,7 @@ data SPDTMP7.VB_Apr_HB_TN_ITM_REV_AE_ (Compress=yes);
 
   
 
-data SPDTMP7.VB_Apr_BS_TN_ITM_REV_AE_ (Compress=yes);
+data SPDTMP7.VB_Apr17_BS_TN_ITM_REV_AE_ (Compress=yes);
       set sascrm.TN_ITM_REV_AE ;
 		where TXN_DT_WID >= 20160401 and TXN_DT_WID<= 20170331 and LMG_CONCEPT_NAME = "Babyshop" and TRANSACTION_TYPE = "Purchase" and units >= 0 and revenue_aed >= 0 and Retail_cost_1_AED >= 0 and Retail_cost_2_AED>= 0 ;
 
@@ -98,42 +98,42 @@ data SPDTMP7.VB_Apr_BS_TN_ITM_REV_AE_ (Compress=yes);
   run;
 
   /*
-data SPDTMP7.VB_Apr_LS_TN_ITM_REV_AE;
-set SPDTMP7.VB_Apr_LS_TN_ITM_REV_AE ; 
+data SPDTMP7.VB_Apr17_LS_TN_ITM_REV_AE;
+set SPDTMP7.VB_Apr17_LS_TN_ITM_REV_AE ; 
 date = INPUT(PUT(TXN_DT_WID,8.),YYMMDD8.); 
 format date ddmmyys10.;
 run;
 
-data SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE;
-set SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE ; 
+data SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE;
+set SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE ; 
 date = INPUT(PUT(TXN_DT_WID,8.),YYMMDD8.); 
 format date ddmmyys10.;
 run;
 */
 
-data SPDTMP7.VB_Apr_LS_CUST_DETL_LMG_AE (Compress=yes);
+data SPDTMP7.VB_Apr17_LS_CUST_DETL_LMG_AE (Compress=yes);
       set sascrm.CUST_DETL_LMG_AE ;
 run;
 
 
 /* 
   proc export
-   Data = SPDTMP7.VB_Apr_LS_TN_ITM_REV_AE
-   OUTFILE="/sasusers/process/ds/vijayb/VB_Apr_LS_TN_ITM_REV_AE_ver1"
+   Data = SPDTMP7.VB_Apr17_LS_TN_ITM_REV_AE
+   OUTFILE="/sasusers/process/ds/vijayb/VB_Apr17_LS_TN_ITM_REV_AE_ver1"
    REPLACE;
   Run;
 
-proc contents data= SPDTMP7.VB_Apr_LS_TN_ITM_REV_AE_ver1;
+proc contents data= SPDTMP7.VB_Apr17_LS_TN_ITM_REV_AE_ver1;
 run; 
 
 */
-/*This part of the code creates a dataset of final Variables from Table VB_Apr_ALL_TN_ITM_REV_AE i.e. Data of all concepts
+/*This part of the code creates a dataset of final Variables from Table VB_Apr17_ALL_TN_ITM_REV_AE i.e. Data of all concepts
   This table needs to be joined with the Lifestyle Table*/
 
 
 
 proc sql;
-create table SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE_oval (compress=yes) as
+create table SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE_oval (compress=yes) as
 select LMG_MEM_CARD_Number, 
 		sum(revenue_aed) as LMG_sum_revenue_aed , 
 		count(distinct date) as no_of_visits_LMG, 
@@ -144,14 +144,14 @@ select LMG_MEM_CARD_Number,
 		sum(units) as total_unit_LMG, 
 		sum(base_points_accrued) as Total_points_LMG, 
 		count(distinct LMG_CONCEPT_NAME) as concept_count_LMG
-from SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE
+from SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE
  
 group by LMG_MEM_CARD_Number;
 
 quit;
 
-data SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE_oval_1(compress=yes);
-set SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE_oval;
+data SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE_oa_1(compress=yes);
+set SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE_oval;
 format start_date_LMG ddmmyys10.;
 format end_date_LMG ddmmyys10.;
 active_time_LMG=intck('day',start_date_LMG,end_date_LMG);
@@ -161,18 +161,18 @@ atv_LMG = LMG_sum_revenue_aed/no_of_txn_LMG;
 run;
 
 
-/*proc means data= SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE_oval_1;*/
+/*proc means data= SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE_oval_1;*/
 /*run;*/
 
 
-data SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE9(compress=yes);
-set SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE (keep= lmg_mem_card_number lmg_concept_name txn_dt_wid revenue_aed invoice_number units item_code base_points_accrued date);
+data SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE9(compress=yes);
+set SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE (keep= lmg_mem_card_number lmg_concept_name txn_dt_wid revenue_aed invoice_number units item_code base_points_accrued date);
 where txn_dt_wid>=20160701 and txn_dt_wid<=20170331 ;
 
 run;
 
 proc sql;
-create table SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE9_2 (compress=yes) as
+create table SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE9_2 (compress=yes) as
 select LMG_MEM_CARD_Number, 
 		sum(revenue_aed) as LMG_sum_revenue_aed_9 , 
 		count(distinct date) as no_of_visits_LMG9, 
@@ -184,7 +184,7 @@ select LMG_MEM_CARD_Number,
 		sum(base_points_accrued) as Total_points_LMG9,
 		count(distinct LMG_CONCEPT_NAME) as concept_count_LMG9 
 
-from SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE9
+from SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE9
  
 group by LMG_MEM_CARD_Number;
 
@@ -193,8 +193,8 @@ quit;
 
 
 
-data SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE9_3(compress=yes);
-set SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE9_2;
+data SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE9_3(compress=yes);
+set SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE9_2;
 format start_date_LMG9 ddmmyys10.;
 format end_date_LMG9 ddmmyys10.;
 active_time_LMG9=intck('day',start_date_LMG9,end_date_LMG9);
@@ -203,19 +203,19 @@ avg_units_per_visit_LMG9 =  total_unit_LMG9/no_of_visits_LMG9;
 atv_LMG9 = LMG_sum_revenue_aed_9/no_of_txn_LMG9;
 run;
 
-/*proc means data= SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE9_3;*/
+/*proc means data= SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE9_3;*/
 /*run;*/
 
 
-data SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE6(compress=yes);
-set SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE(keep= lmg_mem_card_number lmg_concept_name  txn_dt_wid revenue_aed invoice_number units item_code base_points_accrued date);
+data SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE6(compress=yes);
+set SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE(keep= lmg_mem_card_number lmg_concept_name  txn_dt_wid revenue_aed invoice_number units item_code base_points_accrued date);
 where txn_dt_wid>=20161001 and txn_dt_wid<=20170331 ;
 
 run;
 
 
 proc sql;
-create table SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE6_2 (compress=yes) as
+create table SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE6_2 (compress=yes) as
 select LMG_MEM_CARD_Number, 
         sum(revenue_aed) as LMG_sum_revenue_aed_6 , 
 		count(distinct date) as no_of_visits_LMG6, 
@@ -224,12 +224,12 @@ select LMG_MEM_CARD_Number,
 		count(distinct item_code) as distinct_prod_LMG6, sum(units) as total_unit_LMG6, 
 		sum(base_points_accrued) as Total_points_LMG6,
 		count(distinct LMG_CONCEPT_NAME) as concept_count_LMG6 
-from SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE6
+from SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE6
 group by LMG_MEM_CARD_Number;
 quit;
 
-data SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE6_3(compress=yes);
-set SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE6_2;
+data SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE6_3(compress=yes);
+set SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE6_2;
 format start_date_LMG6 ddmmyys10.;
 format end_date_LMG6 ddmmyys10.;
 active_time_LMG6=intck('day',start_date_LMG6,end_date_LMG6);
@@ -239,17 +239,16 @@ atv_LMG6 = LMG_sum_revenue_aed_6/no_of_txn_LMG6;
 run;
 
 
-/*proc means data= SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE6_3;*/
+/*proc means data= SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE6_3;*/
 /*run;*/
 
-
-data SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE3(compress=yes);
-set SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE(keep= lmg_mem_card_number lmg_concept_name txn_dt_wid revenue_aed invoice_number units item_code base_points_accrued date);
+data SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE3(compress=yes);
+set SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE(keep= lmg_mem_card_number lmg_concept_name txn_dt_wid revenue_aed invoice_number units item_code base_points_accrued date);
 where txn_dt_wid>=20170101 and txn_dt_wid<=20170331 ;
 run;
 
 proc sql;
-create table SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE3_2 (compress=yes) as
+create table SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE3_2 (compress=yes) as
 select LMG_MEM_CARD_Number, 
 sum(revenue_aed) as LMG_sum_revenue_aed_3 ,
 count(distinct date) as no_of_visits_LMG3, 
@@ -260,12 +259,12 @@ sum(units) as total_unit_LMG3,
 sum(base_points_accrued) as Total_points_LMG3 ,
 count(distinct LMG_CONCEPT_NAME) as concept_count_LMG3
 
-from SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE3
+from SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE3
 group by LMG_MEM_CARD_Number;
 quit;
 
-data SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE3_3(compress=yes);
-set SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE3_2;
+data SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE3_3(compress=yes);
+set SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE3_2;
 format start_date_LMG3 ddmmyys10.;
 format end_date_LMG3 ddmmyys10.;
 active_time_LMG3=intck('day',start_date_LMG3,end_date_LMG3);
@@ -277,43 +276,43 @@ run;
 /*joining the Overall, 9,6 and 3 month tables to create a consolidated table */
 
 proc sql;
-create Table SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE_1_newer (compress=yes, drop = end_date_lmg start_date_lmg end_date_lmg9 start_date_lmg9 end_date_lmg6 start_date_lmg6 end_date_lmg3 start_date_lmg3) as 
-select * from SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE_oval_1 as T1
-left join (Select * from (select * from SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE9_3 as a 
-				              left join SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE6_3 as b 
+create Table SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE_1_nwr (compress=yes, drop = end_date_lmg start_date_lmg end_date_lmg9 start_date_lmg9 end_date_lmg6 start_date_lmg6 end_date_lmg3 start_date_lmg3) as 
+select * from SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE_oa_1 as T1
+left join (Select * from (select * from SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE9_3 as a 
+				              left join SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE6_3 as b 
 				               on a.LMG_MEM_CARD_NUMBER = b.LMG_MEM_CARD_NUMBER) as c
-                          left join SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE3_3 as d
+                          left join SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE3_3 as d
                           on c.LMG_MEM_CARD_NUMBER = d.LMG_MEM_CARD_NUMBER) as e
 
 on T1.LMG_MEM_CARD_NUMBER = e.LMG_MEM_CARD_NUMBER;
 run;
 
 
-/*Creating a dataset of final Variables from Table VB_Apr_LS_TN_ITM_REV_AE i.e. Data of only the Lifestyle concept*/
+/*Creating a dataset of final Variables from Table VB_Apr17_LS_TN_ITM_REV_AE i.e. Data of only the Lifestyle concept*/
 /*Joining the DIM_ITM_LS Table to LS Transactions table */
 
-data SPDTMP7.VB_Apr_LS_Dim_itm_ls (compress= yes) ;
+data SPDTMP7.VB_Apr17_LS_Dim_itm_ls (compress= yes) ;
 set saser.dim_itm_ls;
 run;
 
 proc sql;
-  create table SPDTMP7.VB_Apr_LS_TN_ITM_REV_AE_0 (compress = yes) as
-  select t1.* , t2.GRP_CD , t2.GRP_NM , t2.DPT_CD, DPT_NM from SPDTMP7.VB_Apr_LS_TN_ITM_REV_AE_ as t1
-  left join SPDTMP7.VB_Apr_LS_Dim_itm_ls as t2
+  create table SPDTMP7.VB_Apr17_LS_TN_ITM_REV_AE_0 (compress = yes) as
+  select t1.* , t2.GRP_CD , t2.GRP_NM , t2.DPT_CD, DPT_NM from SPDTMP7.VB_Apr17_LS_TN_ITM_REV_AE_ as t1
+  left join SPDTMP7.VB_Apr17_LS_Dim_itm_ls as t2
   on t1.ITEM_CODE = t2.ITM_CD;
  quit;
 
 
 
 /**/
-/* proc freq data= SPDTMP7.VB_Apr_LS_TN_ITM_REV_AE_0;*/
+/* proc freq data= SPDTMP7.VB_Apr17_LS_TN_ITM_REV_AE_0;*/
 /**/
 /* tables dpt_nm grp_nm;*/
 /* run;*/
 
 
 proc sql ;
-  Create Table SPDTMP7.VB_Apr_LS_TN_ITM_REV_AE_1 (compress = yes) as
+  Create Table SPDTMP7.VB_Apr17_LS_TN_ITM_REV_AE_1 (compress = yes) as
    select LMG_MEM_CARD_NUMBER 
 		
    		,count (distinct INVOICE_NUMBER) as NUM_Transactions
@@ -446,13 +445,13 @@ proc sql ;
 		,count (distinct(case when DPT_NM = "Spa" then INVOICE_NUMBER else '' end)) as Dpt_Spa_trnxns
 		,count (distinct(case when DPT_NM = "Towels" then INVOICE_NUMBER else '' end)) as Dpt_Tow_trnxns
 
-from SPDTMP7.VB_Apr_LS_TN_ITM_REV_AE_0
+from SPDTMP7.VB_Apr17_LS_TN_ITM_REV_AE_0
 Group By LMG_MEM_CARD_NUMBER ;
 quit;
 
 
-data SPDTMP7.VB_Apr_LS_TN_ITM_REV_AE_1_1 (compress=yes);
-set SPDTMP7.VB_Apr_LS_TN_ITM_REV_AE_1;
+data SPDTMP7.VB_Apr17_LS_TN_ITM_REV_AE_1_1 (compress=yes);
+set SPDTMP7.VB_Apr17_LS_TN_ITM_REV_AE_1;
 
 atv_LS = (Total_REVENUE_AED)/NUM_Transactions   ;
 atv_LS_3 = (REVENUEAED_3)/NUM_Transactions_3;
@@ -462,11 +461,11 @@ atv_LS_9 = (REVENUEAED_9)/NUM_Transactions_9;
 run;
 
 
-proc means data= SPDTMP7.VB_Apr_LS_TN_ITM_REV_AE_1_1;
+proc means data= SPDTMP7.VB_Apr17_LS_TN_ITM_REV_AE_1_1;
 run;
 
 proc sql ;
-  Create Table SPDTMP7.VB_Apr_SH_TN_ITM_REV_AE_1 (compress = yes) as
+  Create Table SPDTMP7.VB_Apr17_SH_TN_ITM_REV_AE_1 (compress = yes) as
    select LMG_MEM_CARD_NUMBER 
 		
    		,count (distinct INVOICE_NUMBER) as NUM_Transactions_SH
@@ -513,12 +512,12 @@ proc sql ;
 
 		, (max(date)-min(date)) as period_bw_trnxns_SH
 
-		from SPDTMP7.VB_Apr_SH_TN_ITM_REV_AE_
+		from SPDTMP7.VB_Apr17_SH_TN_ITM_REV_AE_
 Group By LMG_MEM_CARD_NUMBER ;
 quit;
 
-data SPDTMP7.VB_Apr_SH_TN_ITM_REV_AE_1_1(compress = yes);
-set SPDTMP7.VB_Apr_SH_TN_ITM_REV_AE_1;
+data SPDTMP7.VB_Apr17_SH_TN_ITM_REV_AE_1_1(compress = yes);
+set SPDTMP7.VB_Apr17_SH_TN_ITM_REV_AE_1;
 
 atv_SH = (Total_REVENUEAED_SH)/NUM_Transactions_SH;
 atv_SH_3 = (REVENUEAED_3_SH)/NUM_Transactions_3_SH;
@@ -527,11 +526,11 @@ atv_SH_9 = (REVENUEAED_9_SH)/NUM_Transactions_9_SH;
 
 run;
 
-proc means data= SPDTMP7.VB_Apr_SH_TN_ITM_REV_AE_1_1;
+proc means data= SPDTMP7.VB_Apr17_SH_TN_ITM_REV_AE_1_1;
 run;
 
 proc sql ;
-  Create Table SPDTMP7.VB_Apr_HC_TN_ITM_REV_AE_1 (compress = yes) as
+  Create Table SPDTMP7.VB_Apr17_HC_TN_ITM_REV_AE_1 (compress = yes) as
    select LMG_MEM_CARD_NUMBER 
 		
    		,count (distinct INVOICE_NUMBER) as NUM_Transactions_HC
@@ -579,12 +578,12 @@ proc sql ;
 		, (max(date)-min(date)) as period_bw_trnxns_HC
 
 		
-from SPDTMP7.VB_Apr_HC_TN_ITM_REV_AE_
+from SPDTMP7.VB_Apr17_HC_TN_ITM_REV_AE_
 Group By LMG_MEM_CARD_NUMBER ;
 quit;
 
-data SPDTMP7.VB_Apr_HC_TN_ITM_REV_AE_1_1(compress = yes);
-set SPDTMP7.VB_Apr_HC_TN_ITM_REV_AE_1;
+data SPDTMP7.VB_Apr17_HC_TN_ITM_REV_AE_1_1(compress = yes);
+set SPDTMP7.VB_Apr17_HC_TN_ITM_REV_AE_1;
 
 atv_HC = (Total_REVENUEAED_HC)/NUM_Transactions_HC   ;
 atv_HC_3 = (REVENUEAED_3_HC)/NUM_Transactions_3_HC;
@@ -594,12 +593,12 @@ atv_HC_9 = (REVENUEAED_9_HC)/NUM_Transactions_9_HC;
 run;
 
 
-proc means data= SPDTMP7.VB_Apr_HC_TN_ITM_REV_AE_1_1;
+proc means data= SPDTMP7.VB_Apr17_HC_TN_ITM_REV_AE_1_1;
 run;
 
 
 proc sql ;
-  Create Table SPDTMP7.VB_Apr_HB_TN_ITM_REV_AE_1 (compress = yes) as
+  Create Table SPDTMP7.VB_Apr17_HB_TN_ITM_REV_AE_1 (compress = yes) as
    select LMG_MEM_CARD_NUMBER 
 		
    		,count (distinct INVOICE_NUMBER) as NUM_Transactions_HB
@@ -647,12 +646,12 @@ proc sql ;
 		, (max(date)-min(date)) as period_bw_trnxns_HB
 
 		
-from SPDTMP7.VB_Apr_HB_TN_ITM_REV_AE_
+from SPDTMP7.VB_Apr17_HB_TN_ITM_REV_AE_
 Group By LMG_MEM_CARD_NUMBER ;
 quit;
 
-data SPDTMP7.VB_Apr_HB_TN_ITM_REV_AE_1_1(compress = yes);
-set SPDTMP7.VB_Apr_HB_TN_ITM_REV_AE_1;
+data SPDTMP7.VB_Apr17_HB_TN_ITM_REV_AE_1_1(compress = yes);
+set SPDTMP7.VB_Apr17_HB_TN_ITM_REV_AE_1;
 
 atv_HB = (Total_REVENUEAED_HB)/NUM_Transactions_HB   ;
 atv_HB_3 = (REVENUEAED_3_HB)/NUM_Transactions_3_HB;
@@ -664,88 +663,88 @@ run;
 
 
 
-proc sql ;
-  Create Table SPDTMP7.VB_Apr_BS_TN_ITM_REV_AE_1newer (compress = yes) as
-   select LMG_MEM_CARD_NUMBER 
-		
-   		,count (distinct INVOICE_NUMBER) as NUM_Transactions_BS
-	    ,count(distinct (case when Visit_flag = 1 then INVOICE_NUMBER else '' end)) as Num_transactions_3_BS
-		,count(distinct (case when Visit_flag= 1 or Visit_flag=2 then INVOICE_NUMBER else '' end)) as Num_transactions_6_BS
-		,count(distinct (case when Visit_flag= 1 or Visit_flag=2 or Visit_flag=3   then INVOICE_NUMBER else '' end)) as Num_transactions_9_BS
-		
-		,count (distinct TXN_DT_WID)as NUM_VISITS_BS 
-		,count(distinct (case when Visit_flag=1 then TXN_DT_WID else . end)) as Num_Visits_3_BS
-		,count (distinct (case when Visit_flag=1 or Visit_flag = 2 then TXN_DT_WID else . end)) as Num_Visits_6_BS
-		,count(distinct (case when Visit_flag=1 or Visit_flag = 2 or Visit_flag = 3 then TXN_DT_WID else . end)) as Num_Visits_9_BS
-			
-	
-		,count (distinct ITEM_CODE) as NUM_DIST_PRODUCTS_BS 
-		,count(distinct(case when Visit_flag=1 then ITEM_CODE else '' end)) as Num_Dist_prod_3_BS
-		,count(distinct (case when Visit_flag= 1 or Visit_flag=2   then ITEM_CODE else '' end)) as Num_Dist_prod_6_BS
-		,count(distinct (case when Visit_flag= 1 or Visit_flag=2 or Visit_flag=3  then ITEM_CODE else '' end)) as Num_Dist_prod_BS
-		
-		,sum(Retail_cost_1_AED) as Total_Retail_cost_1_AED_BS
-		,sum(case when Visit_flag=1 then Retail_cost_1_AED else . end) as Retail_cost_1_AED_3_BS
-		,sum(case when Visit_flag= 1 or Visit_flag=2   then Retail_cost_1_AED else . end) as Retail_cost_1_AED_6_BS
-		,sum(case when Visit_flag= 1 or Visit_flag=2 or Visit_flag=3  then Retail_cost_1_AED else . end) as Retail_cost_1_AED_9_BS
+/*proc sql ;*/
+/*  Create Table SPDTMP7.VB_Apr17_BS_TN_ITM_REV_AE_1newer (compress = yes) as*/
+/*   select LMG_MEM_CARD_NUMBER */
+/*		*/
+/*   		,count (distinct INVOICE_NUMBER) as NUM_Transactions_BS*/
+/*	    ,count(distinct (case when Visit_flag = 1 then INVOICE_NUMBER else '' end)) as Num_transactions_3_BS*/
+/*		,count(distinct (case when Visit_flag= 1 or Visit_flag=2 then INVOICE_NUMBER else '' end)) as Num_transactions_6_BS*/
+/*		,count(distinct (case when Visit_flag= 1 or Visit_flag=2 or Visit_flag=3   then INVOICE_NUMBER else '' end)) as Num_transactions_9_BS*/
+/*		*/
+/*		,count (distinct TXN_DT_WID)as NUM_VISITS_BS */
+/*		,count(distinct (case when Visit_flag=1 then TXN_DT_WID else . end)) as Num_Visits_3_BS*/
+/*		,count (distinct (case when Visit_flag=1 or Visit_flag = 2 then TXN_DT_WID else . end)) as Num_Visits_6_BS*/
+/*		,count(distinct (case when Visit_flag=1 or Visit_flag = 2 or Visit_flag = 3 then TXN_DT_WID else . end)) as Num_Visits_9_BS*/
+/*			*/
+/*	*/
+/*		,count (distinct ITEM_CODE) as NUM_DIST_PRODUCTS_BS */
+/*		,count(distinct(case when Visit_flag=1 then ITEM_CODE else '' end)) as Num_Dist_prod_3_BS*/
+/*		,count(distinct (case when Visit_flag= 1 or Visit_flag=2   then ITEM_CODE else '' end)) as Num_Dist_prod_6_BS*/
+/*		,count(distinct (case when Visit_flag= 1 or Visit_flag=2 or Visit_flag=3  then ITEM_CODE else '' end)) as Num_Dist_prod_BS*/
+/*		*/
+/*		,sum(Retail_cost_1_AED) as Total_Retail_cost_1_AED_BS*/
+/*		,sum(case when Visit_flag=1 then Retail_cost_1_AED else . end) as Retail_cost_1_AED_3_BS*/
+/*		,sum(case when Visit_flag= 1 or Visit_flag=2   then Retail_cost_1_AED else . end) as Retail_cost_1_AED_6_BS*/
+/*		,sum(case when Visit_flag= 1 or Visit_flag=2 or Visit_flag=3  then Retail_cost_1_AED else . end) as Retail_cost_1_AED_9_BS*/
+/**/
+/**/
+/*		,sum(Retail_cost_2_AED) as Total_Retail_cost_2_AED_BS*/
+/*		,sum(case when Visit_flag=1 then Retail_cost_2_AED else . end) as Retail_cost_2_AED_3_BS*/
+/*		,sum(case when Visit_flag= 1 or Visit_flag=2   then Retail_cost_2_AED else . end) as Retail_cost_2_AED_6_BS*/
+/*		,sum(case when Visit_flag= 1 or Visit_flag=2 or Visit_flag=3  then Retail_cost_2_AED else . end) as Retail_cost_2_AED_9_BS*/
+/**/
+/*		,sum(REVENUE_AED) as Total_REVENUEAED_BS*/
+/*		,sum(case when Visit_flag=1 then REVENUE_AED else . end) as REVENUEAED_3_BS*/
+/*		,sum(case when Visit_flag= 1 or Visit_flag=2   then REVENUE_AED else . end) as REVENUEAED_6_BS*/
+/*		,sum(case when Visit_flag= 1 or Visit_flag=2 or Visit_flag=3 then REVENUE_AED else . end) as REVENUEAED_9_BS*/
+/**/
+/*		,sum(UNITS) as Total_UNITS_BS */
+/*		,sum(case when Visit_flag=1 then UNITS else . end) as Units_3_BS*/
+/*		,sum(case when Visit_flag= 1 or Visit_flag=2   then UNITS else . end) as Units_6_BS*/
+/*		,sum(case when Visit_flag= 1 or Visit_flag=2 or Visit_flag=3  then UNITS else . end) as Units_9_BS*/
+/**/
+/*		,( '28Apr2017'd-max(date)) as recency_BS */
+/*		,('28Apr2017'd-max(case when Visit_flag=1 then date else . end))as recency_3_BS*/
+/*		,('28Apr2017'd-max(case when Visit_flag=1 or Visit_flag = 2 then date else . end))as recency_6_BS*/
+/*		,('28Apr2017'd-max(case when Visit_flag=1 or Visit_flag = 2 or Visit_flag = 3 then date else . end))as recency_9_BS*/
+/**/
+/*		, (max(date)-min(date)) as period_bw_trnxns_BS*/
+/*		*/
+/*from SPDTMP7.VB_Apr17_BS_TN_ITM_REV_AE_*/
+/*Group By LMG_MEM_CARD_NUMBER ;*/
+/*quit;*/
+/**/
+/**/
+/**/
+/**/
+/*data SPDTMP7.VB_Apr17_BS_TN_ITM_REV_AE_1_1(compress = yes);*/
+/*set SPDTMP7.VB_Apr17_BS_TN_ITM_REV_AE_1newer;*/
+/**/
+/*atv_BS = (Total_REVENUEAED_BS)/NUM_Transactions_BS;*/
+/*atv_BS_3 = (REVENUEAED_3_BS)/NUM_Transactions_3_BS;*/
+/*atv_BS_6 = (REVENUEAED_6_BS)/NUM_Transactions_6_BS;*/
+/*atv_BS_9 = (REVENUEAED_9_BS)/NUM_Transactions_9_BS;*/
+/**/
+/*run;*/
 
-
-		,sum(Retail_cost_2_AED) as Total_Retail_cost_2_AED_BS
-		,sum(case when Visit_flag=1 then Retail_cost_2_AED else . end) as Retail_cost_2_AED_3_BS
-		,sum(case when Visit_flag= 1 or Visit_flag=2   then Retail_cost_2_AED else . end) as Retail_cost_2_AED_6_BS
-		,sum(case when Visit_flag= 1 or Visit_flag=2 or Visit_flag=3  then Retail_cost_2_AED else . end) as Retail_cost_2_AED_9_BS
-
-		,sum(REVENUE_AED) as Total_REVENUEAED_BS
-		,sum(case when Visit_flag=1 then REVENUE_AED else . end) as REVENUEAED_3_BS
-		,sum(case when Visit_flag= 1 or Visit_flag=2   then REVENUE_AED else . end) as REVENUEAED_6_BS
-		,sum(case when Visit_flag= 1 or Visit_flag=2 or Visit_flag=3 then REVENUE_AED else . end) as REVENUEAED_9_BS
-
-		,sum(UNITS) as Total_UNITS_BS 
-		,sum(case when Visit_flag=1 then UNITS else . end) as Units_3_BS
-		,sum(case when Visit_flag= 1 or Visit_flag=2   then UNITS else . end) as Units_6_BS
-		,sum(case when Visit_flag= 1 or Visit_flag=2 or Visit_flag=3  then UNITS else . end) as Units_9_BS
-
-		,( '28Apr2017'd-max(date)) as recency_BS 
-		,('28Apr2017'd-max(case when Visit_flag=1 then date else . end))as recency_3_BS
-		,('28Apr2017'd-max(case when Visit_flag=1 or Visit_flag = 2 then date else . end))as recency_6_BS
-		,('28Apr2017'd-max(case when Visit_flag=1 or Visit_flag = 2 or Visit_flag = 3 then date else . end))as recency_9_BS
-
-		, (max(date)-min(date)) as period_bw_trnxns_BS
-		
-from SPDTMP7.VB_Apr_BS_TN_ITM_REV_AE_
-Group By LMG_MEM_CARD_NUMBER ;
-quit;
-
-
-
-
-data SPDTMP7.VB_Apr_BS_TN_ITM_REV_AE_1_1(compress = yes);
-set SPDTMP7.VB_Apr_BS_TN_ITM_REV_AE_1newer;
-
-atv_BS = (Total_REVENUEAED_BS)/NUM_Transactions_BS;
-atv_BS_3 = (REVENUEAED_3_BS)/NUM_Transactions_3_BS;
-atv_BS_6 = (REVENUEAED_6_BS)/NUM_Transactions_6_BS;
-atv_BS_9 = (REVENUEAED_9_BS)/NUM_Transactions_9_BS;
-
-run;
-
-
-
-proc sql;
-create table SPDTMP7.VB_Apr_LS_SHHB_TN_ITM_REV_AE_1_1 (Compress = yes) as 
-    select * from SPDTMP7.VB_Apr_LS_TN_ITM_REV_AE_1_1  ls
-	left join SPDTMP7.VB_Apr_SH_TN_ITM_REV_AE_1_1  sh on ls.LMG_MEM_CARD_NUMBER = sh.LMG_MEM_CARD_NUMBER
-	left join  SPDTMP7.VB_Apr_HC_TN_ITM_REV_AE_1_1  hc on ls.LMG_MEM_CARD_NUMBER = hc.LMG_MEM_CARD_NUMBER
-	left join SPDTMP7.VB_Apr_HB_TN_ITM_REV_AE_1_1  hb on ls.LMG_MEM_CARD_NUMBER = hb.LMG_MEM_CARD_NUMBER
- 	left join SPDTMP7.VB_Apr_BS_TN_ITM_REV_AE_1_1  bs on ls.LMG_MEM_CARD_NUMBER = bs.LMG_MEM_CARD_NUMBER;               
-																												
-quit;
 
 
 proc sql;
-Create Table SPDTMP7.VB_Apr_ALL_LS_LMG_TN_ITM_REV_AE (compress=yes) as 
-select * from SPDTMP7.VB_Apr_LS_SHHB_TN_ITM_REV_AE_1_1 as a
-left join SPDTMP7.VB_Apr_ALL_TN_ITM_REV_AE_1_newer as b
+create table SPDTMP7.VB_Apr17_LS_SHHB_TN_ITM_AE_1_1 (Compress = yes) as 
+    select * from SPDTMP7.VB_Apr17_LS_TN_ITM_REV_AE_1_1  ls
+	left join SPDTMP7.VB_Apr17_SH_TN_ITM_REV_AE_1_1  sh on ls.LMG_MEM_CARD_NUMBER = sh.LMG_MEM_CARD_NUMBER
+	left join  SPDTMP7.VB_Apr17_HC_TN_ITM_REV_AE_1_1  hc on ls.LMG_MEM_CARD_NUMBER = hc.LMG_MEM_CARD_NUMBER
+	left join SPDTMP7.VB_Apr17_HB_TN_ITM_REV_AE_1_1  hb on ls.LMG_MEM_CARD_NUMBER = hb.LMG_MEM_CARD_NUMBER
+/* 	left join SPDTMP7.VB_Apr17_BS_TN_ITM_REV_AE_1_1  bs on ls.LMG_MEM_CARD_NUMBER = bs.LMG_MEM_CARD_NUMBER;              */
+	;																											
+quit;
+
+
+proc sql;
+Create Table SPDTMP7.VB_Apr17_ALL_LS_LMG_TN_ITM_AE (compress=yes) as 
+select * from SPDTMP7.VB_Apr17_LS_SHHB_TN_ITM_AE_1_1 as a
+left join SPDTMP7.VB_Apr17_ALL_TN_ITM_REV_AE_1_nwr as b
 on a.LMG_MEM_CARD_NUMBER  = b.LMG_MEM_CARD_NUMBER;
 Quit;
 
@@ -754,17 +753,17 @@ Quit;
 
 
 
-/* proc contents data=SPDTMP7.VB_Apr_ALL_LS_LMG_TN_ITM_REV_AE;
+/* proc contents data=SPDTMP7.VB_Apr17_ALL_LS_LMG_TN_ITM_AE;
 run;   */
 
-/*Creating a dataset of final Variables from VB_Apr_ALL_CUST_DETL_LMG_AE Customer Details Table*/
-data SPDTMP7.VB_Apr_LS_CUST_DETL_LMG_AE_1  (compress = yes);
-set SPDTMP7.VB_Apr_LS_CUST_DETL_LMG_AE (Keep= LMG_MEM_CARD_NUMBER SEX_MF_NAME  
+/*Creating a dataset of final Variables from VB_Apr17_ALL_CUST_DETL_LMG_AE Customer Details Table*/
+data SPDTMP7.VB_Apr17_LS_CUST_DETL_LMG_AE_1  (compress = yes);
+set SPDTMP7.VB_Apr17_LS_CUST_DETL_LMG_AE (Keep= LMG_MEM_CARD_NUMBER SEX_MF_NAME  
 		 LANG_NAME  AGE LMG_EFFECTIVE_POINTS CVM_Nationality_group ); 
 
 run;
 
-/* proc freq data= SPDTMP7.VB_Apr_LS_CUST_DETL_LMG_AE ; */
+/* proc freq data= SPDTMP7.VB_Apr17_LS_CUST_DETL_LMG_AE ; */
 /*   tables Income_range_name Job_title Marital_stat_name  lang_name active_flg active_lang CVM_Nationality_group/missing;  */
 /*   run;  */
 
@@ -773,49 +772,49 @@ run;
 /* joining the Final Transaction Table with the final Customer Details Table */
 
 proc sql;
-Create Table SPDTMP7.VB_Apr_CUS_TN_ITM_REV_AE (compress=yes) as 
-select * from SPDTMP7.VB_Apr_ALL_LS_LMG_TN_ITM_REV_AE as a
-left join SPDTMP7.VB_Apr_LS_CUST_DETL_LMG_AE_1 as b
+Create Table SPDTMP7.VB_Apr17_CUS_TN_ITM_REV_AE (compress=yes) as 
+select * from SPDTMP7.VB_Apr17_ALL_LS_LMG_TN_ITM_AE as a
+left join SPDTMP7.VB_Apr17_LS_CUST_DETL_LMG_AE_1 as b
 on a.LMG_MEM_CARD_NUMBER  = b.LMG_MEM_CARD_NUMBER;
 Quit;
 
 /* Getting the RFM segmentation data for Lifestyle */
 
 
-data SPDTMP7.VB_Apr_RFM_SGMT_LS_AE (compress=yes) ;
+data SPDTMP7.VB_Apr17_RFM_SGMT_LS_AE (compress=yes) ;
 set spddata.RFM_SGMNT_LS_AE ;
 by LMG_MEM_CARD_NUMBER seg_yr_end_d  ;
 if last.LMG_MEM_CARD_NUMBER then output  ;
 run;
 
-data SPDTMP7.VB_Apr_RFM_SGMT_LS_AE_1(compress= yes);
-set SPDTMP7.VB_Apr_RFM_SGMT_LS_AE ( drop= LSTAGE_SGMNT) ;
+data SPDTMP7.VB_Apr17_RFM_SGMT_LS_AE_1(compress= yes);
+set SPDTMP7.VB_Apr17_RFM_SGMT_LS_AE ( drop= LSTAGE_SGMNT) ;
 if rfm_sgmnt_n = "0_Not Segmented" then rfm_sgmnt_n = "0 - Not Segmented"  ;
 run;
 
 
 /* Getting the Lifestage segmentation data for Lifestyle */
 
-data SPDTMP7.VB_Apr_LSTG_SGMT_AE (compress= yes);
+data SPDTMP7.VB_Apr17_LSTG_SGMT_AE (compress= yes);
 set spddata.LSTG_SGMNT_AE;
 run;
 
 /* Adding the RFM and Lifestage segmentation data */
 
 proc sql;
-create table SPDTMP7.VB_Apr_CUS_TN_ITM_REV_AE_0 (compress = yes) as
-select * from SPDTMP7.VB_Apr_CUS_TN_ITM_REV_AE as a 
-left join SPDTMP7.VB_Apr_RFM_SGMT_LS_AE_1 as b
+create table SPDTMP7.VB_Apr17_CUS_TN_ITM_REV_AE_0 (compress = yes) as
+select * from SPDTMP7.VB_Apr17_CUS_TN_ITM_REV_AE as a 
+left join SPDTMP7.VB_Apr17_RFM_SGMT_LS_AE_1 as b
 on a.LMG_MEM_CARD_NUMBER = b.LMG_MEM_CARD_NUMBER
-left join SPDTMP7.VB_Apr_LSTG_SGMT_AE as c
+left join SPDTMP7.VB_Apr17_LSTG_SGMT_AE as c
 on a.LMG_MEM_CARD_NUMBER = c.LMG_MEM_CARD_NUMBER;
 quit;
 
 
 /* Checking for Missing Values and Imputing the missing values */
 
-data SPDTMP7.VB_Apr_CUS_TN_ITM_REV_AE_1 (compress=yes);
-set SPDTMP7.VB_Apr_CUS_TN_ITM_REV_AE_0 ;
+data SPDTMP7.VB_Apr17_CUS_TN_ITM_REV_AE_1 (compress=yes);
+set SPDTMP7.VB_Apr17_CUS_TN_ITM_REV_AE_0 ;
 Format age_group $50.0;
 Format age_group $50.0;
 if age>0 and age <=10 then age_group = "0-10";
@@ -831,18 +830,18 @@ run;
 
 /*Imputing age_group*/
 
-data SPDTMP7.VB_Apr_CUS_TN_ITM_REV_AE_2 (compress= yes);
-set SPDTMP7.VB_Apr_CUS_TN_ITM_REV_AE_1;
+data SPDTMP7.VB_Apr17_CUS_TN_ITM_REV_AE_2 (compress= yes);
+set SPDTMP7.VB_Apr17_CUS_TN_ITM_REV_AE_1;
 where age_group<> "NA";
 run;
 
-proc freq data= SPDTMP7.VB_Apr_CUS_TN_ITM_REV_AE_2;
+proc freq data= SPDTMP7.VB_Apr17_CUS_TN_ITM_REV_AE_2;
 tables age_group ;
 run;
 
 
-data SPDTMP7.VB_Apr_CUS_TN_ITM_REV_AE_2 (compress= yes);
-set SPDTMP7.VB_Apr_CUS_TN_ITM_REV_AE_1;
+data SPDTMP7.VB_Apr17_CUS_TN_ITM_REV_AE_2 (compress= yes);
+set SPDTMP7.VB_Apr17_CUS_TN_ITM_REV_AE_1;
 Rand_no = ranuni(123);
 if age_group = "NA" and Rand_no <=0.0049 then age_group = "0-10";
 else if age_group = "NA" and Rand_no > 0.0049 and Rand_no <= 0.0156 then age_group = "11-18";
@@ -856,8 +855,8 @@ run;
 
 
 
-Data SPDTMP7.VB_Apr_CUS_TN_ITM_REV_AE_3new(compress=yes);
-set SPDTMP7.VB_Apr_CUS_TN_ITM_REV_AE_2;
+Data SPDTMP7.VB_Apr17_CUS_TN_ITM_REV_AE_3new(compress=yes);
+set SPDTMP7.VB_Apr17_CUS_TN_ITM_REV_AE_2;
 
 Rev_LS_perc = Total_REVENUE_AED/LMG_sum_revenue_aed ;
 Rev_SH_perc = Total_REVENUEAED_SH/LMG_sum_revenue_aed;
@@ -902,15 +901,15 @@ run;
 /* Filling "."s with 0 for numeric variables */
 
 
-proc stdize data=SPDTMP7.VB_Apr_CUS_TN_ITM_REV_AE_3new OUT=SPDTMP7.VB_Apr_CUS_TN_ITM_REV_AE_4  reponly missing=0;
+proc stdize data=SPDTMP7.VB_Apr17_CUS_TN_ITM_REV_AE_3new OUT=SPDTMP7.VB_Apr17_CUS_TN_ITM_REV_AE_4  reponly missing=0;
 
 run; 
 
 
 /*Making dummy variables for Categorical Variables */
 
-data SPDTMP7.VB_Apr_CUS_TN_ITM_REV_AE_5(compress=yes);
-set SPDTMP7.VB_Apr_CUS_TN_ITM_REV_AE_4;
+data SPDTMP7.VB_Apr17_CUS_TN_ITM_REV_AE_5(compress=yes);
+set SPDTMP7.VB_Apr17_CUS_TN_ITM_REV_AE_4;
 		/* Age Dummy */
   age_dummy_1 = (age_group = "0-10") ;
   age_dummy_2 = (age_group = "11-18");
@@ -950,14 +949,14 @@ set SPDTMP7.VB_Apr_CUS_TN_ITM_REV_AE_4;
 run;
 
 
-proc means data= SPDTMP7.VB_Apr_CUS_TN_ITM_REV_AE_5;
+proc means data= SPDTMP7.VB_Apr17_CUS_TN_ITM_REV_AE_5;
 run;
 
  /*Scoring*/
 
 proc logistic  
      inmodel = SPDTMP7.VB_CUS_TN_ITM_REV_AE_scoring_new;
-     score data =  SPDTMP7.VB_Apr_CUS_TN_ITM_REV_AE_5
+     score data =  SPDTMP7.VB_Apr17_CUS_TN_ITM_REV_AE_5
 	 Out  = SPDTMP7.VB_CUS_TN_ITM_REV_AE_Aprscr;
 run;   
 
